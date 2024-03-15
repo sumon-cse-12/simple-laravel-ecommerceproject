@@ -15,7 +15,7 @@
 <section class=" section-9 pt-4">
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-lg-8 col-12">
                 <div class="table-responsive">
                     <table class="table" id="cart">
                         <thead>
@@ -38,7 +38,7 @@
                                <tr>
                                 <td>
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <img src="images/product-1.jpg" width="" height="">
+                                        <img src="images/product-1.jpg" class="d-none" width="" height="">
                                       <div class="cart-product-name">
                                         {{isset($cart_product['name'])?$cart_product['name']:'' }}
                                       </div>
@@ -46,7 +46,7 @@
                                 </td>
                                 <td>
                                     <div class="product-price-sec-del">
-                                        ৳{{isset($cart_product['discount_price'])?$cart_product['discount_price']:'' }}
+                                       <del> ৳{{isset($cart_product['discount_price'])?$cart_product['discount_price']:'' }}</del>
                                     </div>
                                 </td>
                                 <td>
@@ -71,7 +71,9 @@
                                   
                                 </td>
                                 <td>
+                                   <div class="remove-cart-btn-sec text-center">
                                     <button class="btn btn-sm btn-danger" onclick="delete_cart('{{$cart_product['id']}}')"><i class="fa fa-times"></i></button>
+                                   </div>
                                 </td>
                             </tr>
                                @endforeach
@@ -80,7 +82,7 @@
                     </table>
                 </div>
             </div>
-            <div class="col-md-4">            
+            <div class="col-lg-4 col-12">            
                 <div class="card cart-summery">
                     <div class="sub-title">
                         <h2 class="bg-white">Cart Summery</h3>

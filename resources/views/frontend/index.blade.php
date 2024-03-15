@@ -312,7 +312,7 @@ $app_section = get_settings('app_section')?json_decode(get_settings('app_section
         <div class="row pb-3 mt-3">
             @if (isset($best_selling_products) && $best_selling_products)
            @foreach ($best_selling_products as $best_selling_product)
-           <div class="col-lg-3  col-6 mt-3">
+           <div class="col-lg-3  col-12 mt-3">
                <div class="product-card-sec">
                        <div class="product-image-sec">
                          @if(isset($best_selling_product->image) && $best_selling_product->image)
@@ -451,7 +451,7 @@ $app_section = get_settings('app_section')?json_decode(get_settings('app_section
 
                     </div>
                  <div class="row">
-                    <div class="col-md-6 m-auto">
+                    <div class="col-lg-8 m-auto">
                         <form action="">
                            <div class="row align-items-center">
                             <div class="col-md-10 mt-3">

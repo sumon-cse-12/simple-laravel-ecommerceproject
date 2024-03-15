@@ -120,18 +120,7 @@ $about_us_section_data = $about_us_section ? json_decode($about_us_section->valu
                                <a class="nav-link"  href="{{route('front.products')}}" title="Products"> Products</a>
          
                             </li>
-                            <li class="nav-item">
-                               <a class="nav-link" href="{{route('front.about')}}" title="About us">About Us</a>
-                       
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link"  href="{{route('front.contact')}}" title="About us">Contact Us</a>
-                        
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="{{route('front.blogs')}}" title="Blogs">Blogs</a> 
-                         
-                            </li>
+                 
                           </ul>
                     </div>
                 </nav>
@@ -143,7 +132,7 @@ $about_us_section_data = $about_us_section ? json_decode($about_us_section->valu
         <div class="footer-section mt-5 ">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <div class="footer-content-sec">
                             <div class="footer-text-title">
                                 <div class="app-logo-sec">
@@ -180,7 +169,7 @@ $about_us_section_data = $about_us_section ? json_decode($about_us_section->valu
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <div class="footer-content-sec">
                             <div class="footer-text-title">
                                Important Link
@@ -192,7 +181,29 @@ $about_us_section_data = $about_us_section ? json_decode($about_us_section->valu
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
+                        <div class="footer-card">
+                            <div class="footer-text-title">
+                               Pages
+                             </div>
+                             <div class="short-des-company">
+                                <li class="footer-page-list-item">
+                                    <a class="footer-page-link" href="{{route('front.about')}}" title="About us"> <i class="fa fa-angle-double-right" aria-hidden="true"></i> About Us</a>
+                            
+                                 </li>
+                                 <li class="footer-page-list-item">
+                                     <a class="footer-page-link"  href="{{route('front.contact')}}" title="About us"> <i class="fa fa-angle-double-right" aria-hidden="true"></i> Contact Us</a>
+                             
+                                 </li>
+                                 <li class="footer-page-list-item">
+                                 <a class="footer-page-link" href="{{route('front.blogs')}}" title="Blogs"> <i class="fa fa-angle-double-right" aria-hidden="true"></i> Blogs</a> 
+                              
+                                 </li>
+                             </div>
+                              
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
                         <div class="footer-content-sec">
                             <div class="footer-text-title">
                                Contact Info
@@ -223,7 +234,7 @@ $about_us_section_data = $about_us_section ? json_decode($about_us_section->valu
     <footer class="bg-dark mt-5 d-none">
         <div class="container pb-5 pt-3">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="footer-card">
                         <h3>Contact Info</h3>
 
@@ -233,7 +244,7 @@ $about_us_section_data = $about_us_section ? json_decode($about_us_section->valu
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="footer-card">
                         <h3>Important Links</h3>
                         <ul>
@@ -243,8 +254,7 @@ $about_us_section_data = $about_us_section ? json_decode($about_us_section->valu
                         </ul>
                     </div>
                 </div>
-
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="footer-card">
                         <h3>Social Link</h3>
                         <ul>

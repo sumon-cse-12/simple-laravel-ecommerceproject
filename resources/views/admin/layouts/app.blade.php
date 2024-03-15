@@ -182,6 +182,31 @@
     @yield('content')
     <!-- /.content -->
   </div>
+  <div class="modal fade" id="modal-confirm">
+    <div class="modal-dialog">
+        <form id="modal-form">
+            @csrf
+            <div id="customInput"></div>
+        <div class="modal-content">
+            <div class="modal-header p-2">
+                <h4 class="modal-title">Confirm</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer p-2">
+                <button id="modal-confirm-btn" type="button" class="btn btn-primary btn-sm">Confirm</button>
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+        </form>
+    </div>
+    <!-- /.modal-dialog -->
+</div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
@@ -230,12 +255,30 @@
 <script src="{{asset('backend/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('backend/js/adminlte.js')}}"></script>
+<script src="{{asset('backend/js/custom.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 {{-- <script src="{{asset('backend/js/pages/dashboard.js')}}"></script> --}}
 @yield('custom-js')
 <script>
+      jQuery('button[type="submit"]').on('click', function (e) {
+        var form = $(this).parents('form:first');
+        if (form.valid()) {
+            $(this).attr('disabled', 'disabled').addClass('disabled')
+            $(this).html(' <i class="fa fa-spinner fa-spin"></i> Loading');
+            form.submit();
+        }
+    });
+     jQuery('#modal-confirm-btn').on('click', function (e) {
+        var form = $(this).parents('form:first');
+        if (form.valid()) {
+            $(this).attr('disabled', 'disabled').addClass('disabled')
+            $(this).html(' <i class="fa fa-spinner fa-spin"></i> Loading');
+            form.submit();
+        }
+    });
     $(document).ready(function () {
         setTimeout(() => {
             $('.summernote').summernote();
